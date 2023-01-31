@@ -1,0 +1,205 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.games {
+    position: relative;
+    height: 800px;
+}
+
+
+.games .overlay {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    background: black;
+    opacity: 0.6;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/*media*/
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/*large*/
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.interface,
+.alert {
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 450px;
+}
+
+#levels,
+#btn {
+    text-align: center;
+    background: goldenrod;
+    padding: 15px;
+    width: 100%;
+}
+
+
+@media (max-width: 768px) {
+
+    .interface,
+    .alert {
+        width: calc(100% - 30px);
+    }
+}
+
+#levels p {
+    font-size: 20px;
+    padding: 5px;
+    color: white;
+}
+
+#levels .option {
+    padding: 5px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+#levels .option label {
+    margin-right: 5px;
+}
+
+#levels .option div {
+    display: flex;
+    align-items: center;
+}
+
+#levels .option input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: relative;
+    transition: 0.3s;
+}
+
+#levels .option input[type="radio"]::after {
+    content: " ";
+    position: absolute;
+    width: 0;
+    height: 50%;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#levels .option input[type="radio"]:checked {
+    border-color: red;
+}
+
+#levels .option input[type="radio"]:checked::after {
+    display: block;
+    background-color: red;
+    width: 50%;
+}
+
+audio {
+    display: none;
+}
+
+#btn {
+    display: block;
+    border: none;
+    background-color: white;
+}
+
+.TimeOut {
+    font-size: larger;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.alert {
+    background-color: goldenrod;
+    display: none;
+}
+
+#message {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    display: block;
+    padding: 15px;
+}
+
+#btn1 {
+    font-size: 20px;
+    width: 100%;
+    border: none;
+    padding: 15px;
+}
+
+#Box_Taquin {
+    width: 500px;
+    height: 500px;
+    margin: 130px auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+}
+
+#Box_Taquin button {
+    display: grid;
+    align-content: center;
+    background-color: rgb(21, 131, 102);
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    border: none;
+}
+
+#Box_Taquin button:hover {
+    background-color: rgb(20 98 78);
+}
+
+@media (max-width: 768px) {
+
+    #Box_Taquin {
+        width: calc(100% - 30px);
+        height: 350px;
+    }
+}
